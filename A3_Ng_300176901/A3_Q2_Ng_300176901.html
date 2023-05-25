@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<!--Q2-->
+<html>
+    <head>
+        <meta charset = "utf-">
+        <title>It's Wordle but worse</title>
+        <script type = "text/javascript">
+            var textGuessNum;
+            var btnSubmit;
+            var guessResult;
+            var randNum;
+            // Initialization
+            function start() {
+                textGuessNum = document.getElementById("textGuessNum");
+                btnSubmit = document.getElementById("btnSubmit");
+                btnSubmit.addEventListener("click", guess, false);
+                guessResult = document.getElementById("guessResult");
+                randNum = Math.floor(1 + (Math.random() * 1000));
+            }
+            // Tells user if guess was higher or lower
+            function guess() {
+                var guessNum = parseInt(textGuessNum.value);
+                if (isNaN(guessNum)) {
+                    guessResult.innerHTML = "Not a valid integer";
+                } else {
+                    if (guessNum > randNum) {
+                        guessResult.innerHTML = "Too high. Try again.";
+                    } else if (guessNum < randNum) {
+                        guessResult.innerHTML = "Too low. Try again.";
+                    } else {
+                        guessResult.innerHTML = "Congratulations. You guessed the number!";
+                    }
+                }
+            }
+            window.addEventListener("load", start, false);
+        </script>
+    </head>
+
+    <body>
+        <h1>Guess a number between 1 and 1000 (inclusive)</h1>
+        <p>
+            <form action = "#">
+                <input id = "textGuessNum" type = "text" placeholder = "100">
+                <input id = "btnSubmit" type = "button" value = "Submit Guess">
+                <br>
+                <label id = "guessResult"></label>
+            </form>
+        </p>
+    </body>
+</html>

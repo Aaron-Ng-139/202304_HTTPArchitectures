@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<!--Q3-->
+<html>
+    <head>
+        <meta charset = "utf-">
+        <title>I just copied code from Q2</title>
+        <script type = "text/javascript">
+            var textGuessNum;
+            var btnSubmit;
+            var guessResult;
+            var randNum;
+            var numGuesses = 0;
+            // Initialization
+            function start() {
+                textGuessNum = document.getElementById("textGuessNum");
+                btnSubmit = document.getElementById("btnSubmit");
+                btnSubmit.addEventListener("click", guess, false);
+                guessResult = document.getElementById("guessResult");
+                randNum = Math.floor(1 + (Math.random() * 1000));
+            }
+            // Tells user if guess was higher or lower
+            function guess() {
+                var guessNum = parseInt(textGuessNum.value);
+                if (isNaN(guessNum)) {
+                    guessResult.innerHTML = "Wrong input! You should enter a number between 1 and 1000.";
+                } else {
+                    numGuesses += 1; // Note: guesses only counted if they are valid integers 
+                    if (guessNum > randNum) {
+                        guessResult.innerHTML = "Too high. Try again.";
+                    } else if (guessNum < randNum) {
+                        guessResult.innerHTML = "Too low. Try again.";
+                    } else {
+                        if (numGuesses < 10) {
+                            guessResult.innerHTML = "Either you know the secret or you got lucky!";
+                        } else if (numGuesses == 10) {
+                            guessResult.innerHTML = "Ahah! You know the secret!";
+                        } else {
+                            guessResult.innerHTML = "You should be able to do better";
+                        }
+                    }
+                }
+            }
+            window.addEventListener("load", start, false);
+        </script>
+    </head>
+
+    <body>
+        <h1>Guess a number between 1 and 1000 (inclusive)</h1>
+        <p>
+            <form action = "#">
+                <input id = "textGuessNum" type = "text" placeholder = "100">
+                <input id = "btnSubmit" type = "button" value = "Submit Guess">
+                <br>
+                <label id = "guessResult"></label>
+            </form>
+        </p>
+    </body>
+</html>

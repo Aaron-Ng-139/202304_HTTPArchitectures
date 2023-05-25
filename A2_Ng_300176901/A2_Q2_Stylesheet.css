@@ -1,0 +1,16 @@
+div {
+    border-width: thin;
+    border-style: solid;
+    border-color: purple;
+    background-color: lightgray;
+}
+div:hover {
+    border-style: dashed;
+    background-color: lightblue;
+}
+a {
+    color: red;
+}
+a:hover {
+    color: white;
+}

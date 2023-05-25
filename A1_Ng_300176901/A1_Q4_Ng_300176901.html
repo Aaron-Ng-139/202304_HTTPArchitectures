@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<!--Q4-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Q4: Forms</title>
+    </head>
+
+    <body>
+        <h1>Uni Feedback Form</h1>
+
+        <form method="post" action="https://www.deitel.com/">
+
+            <p>
+                <label>Name:
+                    <input name="name" type="text" required>
+                </label>
+            </p>
+            <p>
+                <label>Email:
+                    <input name="email" type="email" required> (name@domain.com)
+                </label>
+            </p>
+
+            <p>
+                <strong>Things you liked:</strong><br>
+                <label>Campus
+                    <input name="thingsliked" type="checkbox" value="Campus">
+                </label>
+                <label>Students
+                    <input name="thingsliked" type="checkbox" value="Students">
+                </label>
+                <label>Location
+                    <input name="thingsliked" type="checkbox" value="Location">
+                </label>
+                <label>Atmosphere
+                    <input name="thingsliked" type="checkbox" value="Atmosphere">
+                </label>
+                <label>Dorms
+                    <input name="thingsliked" type="checkbox" value="Dorms">
+                </label>
+                <label>Sports
+                    <input name="thingsliked" type="checkbox" value="Sports">
+                </label>
+            </p>
+
+            <p>
+                <strong>How did you become interested in the university?</strong><br>
+                <label>Friends
+                    <input name="interestsource" type="radio" value="Friends" checked>
+                </label>
+                <label>Television
+                    <input name="interestsource" type="radio" value="Television">
+                </label>
+                <label>Internet
+                    <input name="interestsource" type="radio" value="Internet">
+                </label>
+                <label>Other
+                    <input name="interestsource" type="radio" value="Other">
+                </label>
+            </p>
+
+            <p>
+                <label>Comments:<br>
+                    <textarea name="comments" rows="8" cols="40">Enter comments here.</textarea>
+                </label>
+            </p>
+
+            <p>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Clear">
+            </p>
+
+        </form>
+
+    </body>
+</html>

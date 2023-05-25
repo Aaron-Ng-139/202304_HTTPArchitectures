@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<!--Q5-->
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>Wacky Wordart</title>
+    </head>
+
+    <body>
+        <canvas id = "canvas" width = "1000" height = "500" style = "border: 1px solid black;">
+        </canvas>
+        <script>
+            var canvas = document.getElementById("canvas");
+            var context = canvas.getContext("2d");
+
+            context.shadowOffsetX = 2;
+            context.shadowOffsetY = 5
+            context.shadowBlur = 6;
+            context.shadowColor = "gray";
+            context.font = "72px sans-serif";
+            context.textAlign = "center";
+            context.fillText("HTML5 Canvas", 500, 250);
+
+        </script>
+    </body>
+</html>

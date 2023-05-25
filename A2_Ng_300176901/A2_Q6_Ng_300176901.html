@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<!--Q6-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Q6: Palindrome</title>
+
+        <script type="text/javascript">
+            <!--
+                var input; // Possible palindrome input of the user
+                var valid_input = false;
+
+                // Continue prompting user until valid input recieved
+                while (!valid_input) {
+                    // Ask user for 5 digit int as string input
+                     input = window.prompt("Enter a 5 digit integer not starting with 0.");
+
+                    // Checks to determine valid 5-digit int
+                    if (isNaN(parseInt(input))){
+                        window.alert("Input is not an integer. Please enter a 5 digit integer.");
+                    } else if (input.length != 5) {
+                        window.alert("Input is not 5 digits long. Please enter a 5 digit integer not starting with 0.");
+                    } else if (input[0] == "0") {
+                        window.alert("Input starts with 0. Please enter a 5 digit integer not starting with 0.");
+                    } else {
+                        valid_input = true;
+                    }
+                }
+
+                // Determine if integer is a palindrome
+                if (input[0] == input[4] && input[1] == input[3]){
+                    document.writeln("<h1>" + input + " IS a palindrome.</h1>");
+                } else {
+                    document.writeln("<h1>" + input + " IS NOT a palindrome.</h1>");
+                }
+                
+            //-->
+        </script>
+    </head>
+
+    <body>
+
+    </body>
+</html>

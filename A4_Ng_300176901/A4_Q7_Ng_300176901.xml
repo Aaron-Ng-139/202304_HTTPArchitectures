@@ -1,0 +1,24 @@
+<?xml version = "1.0"?>
+<?xml-stylesheet type = "text/xsl" href = "A4_Q7_Ng_300176901.xsl"?>
+
+<!-- Q7 -->
+<!-- On firefox, in about:config, 
+    set security.fileuri.strict_origin_policy to false.
+    otherwise, the .xsl will not be loaded due to security reasons -->
+<product>
+    <product_name>Grandma White's Cookies</product_name>
+    <serving_size>1 Package</serving_size>
+    
+    <nutrition_facts>
+        <calories>260</calories>
+        <fat_calories>100</fat_calories>
+        <fats>11g</fats>
+        <saturated_fats>3g</saturated_fats>
+        <cholesterol>5mg</cholesterol>
+        <sodium>210mg</sodium>
+        <carbohydrates>36g</carbohydrates>
+        <fiber>2g</fiber>
+        <sugars>15g</sugars>
+        <protein>5g</protein>
+    </nutrition_facts>
+</product>

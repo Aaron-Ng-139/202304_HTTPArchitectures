@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<!--Q1-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Celsius-Fahrenheit Conversion</title>
+        <script type = "text/javascript">
+            var convToC;
+            var convToF;
+            // Register buttons
+            function start(){
+                convToC = document.getElementById("convToC");
+                convToC.addEventListener("click", celsius, false);
+
+                var convToF = document.getElementById("convToF");
+                convToF.addEventListener("click", fahrenheit, false);
+            }
+            // Converts F to C and outputs result to label
+            function celsius(){
+                var textFahrenheit = document.getElementById("textFahrenheit");
+                var resultCelsius = document.getElementById("resultCelsius");
+                var fahrenheitValue = parseFloat(textFahrenheit.value);
+                if ( isNaN(fahrenheitValue) ) {
+                    resultCelsius.innerHTML = "Not a valid number";
+                } else {
+                    fahrenheitValue = (5.0/9.0) * (fahrenheitValue - 32);
+                    resultCelsius.innerHTML = fahrenheitValue + "°C";
+                }
+            }
+            // Converts C to F and outpust result to label
+            function fahrenheit(){
+                var textCelsius = document.getElementById("textCelsius");
+                var resultFahrenheit = document.getElementById("resultFahrenheit");
+                var celsiusValue = parseFloat(textCelsius.value);
+                if ( isNaN(celsiusValue) ) {
+                    resultFahrenheit.innerHTML = "Not a valid number";
+                } else {
+                    celsiusValue = (9.0/5.0) * (celsiusValue) + 32;
+                    resultFahrenheit.innerHTML = celsiusValue + "°F";
+                }
+            }
+            window.addEventListener("load", start, false);
+        </script>
+    </head>
+
+    <body>
+        <h1>Celsius-Fahrenheit Calculator</h1>
+        <form action = "#">
+            <p>
+                <label for = "textCelsius">Enter Celsius Value:</label>
+                <input id = "textCelsius" type = "text" placeholder = "30">
+                <input id = "convToF" type = "button" value = "Convert to Fahrenheit">
+                <br>
+                <label id = "resultFahrenheit"></label>
+            </p>
+            <p>
+                <label for = "textFahrenheit">Enter Fahrenheit Value:</label>
+                <input id = "textFahrenheit" type = "text" placeholder = "86">
+                <input id = "convToC" type = "button" value = "Convert to Celsius">
+                <br>
+                <label id = "resultCelsius"></label>
+            </p>
+        </form>
+    </body>
+</html>

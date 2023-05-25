@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<!--Q6-->
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>Goofy ahh shape</title>
+    </head>
+
+    <body>
+        <canvas id = "canvas" width = "500" height = "500" style = "border: 1px solid black;">
+        </canvas>
+        <script>
+            var canvas = document.getElementById("canvas");
+            var context = canvas.getContext("2d");
+            var gradient = context.createLinearGradient(0, 0, 0, 500);
+
+            gradient.addColorStop(0, "red");
+            gradient.addColorStop(0.5, "white");
+            gradient.addColorStop(0.75, "blue");
+
+            context.beginPath();
+            context.moveTo(50, 50);
+            context.lineTo(150, 25);
+            context.lineTo(400, 100);
+            context.lineTo(450, 375);
+            context.lineTo(250, 300);
+            context.lineTo(100, 375);
+            context.lineTo(50, 50);
+            context.fillStyle = gradient;
+            context.fill();
+            context.lineWidth = 2;
+            context.stroke();
+        </script>
+    </body>
+</html>

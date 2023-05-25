@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<!--Q4-->
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Q4 Box Animation</title>
+
+        <style type="text/css">
+            div {
+                width: 100px;
+                height: 100px;
+                background-color: orange;
+                position: relative;
+                -webkit-animation: movingBox linear 2s 0s infinite;
+                -moz-animation: movingBox linear 2s 0s infinite;
+                animation: movingBox linear 2s infinite 0s;
+            }
+            @-webkit-keyframes movingBox {
+                0%  {left: 0px; top: 0px;}
+                25%  {left: 50px; top: 0px;}
+                50%  {left: 50px; top: 50px;}
+                75%  {left: 0px; top: 50px;}
+                100%  {left: 0px; top: 0px;}
+            }
+            @-moz-keyframes movingBox {
+                0%  {left: 0px; top: 0px;}
+                25%  {left: 50px; top: 0px;}
+                50%  {left: 50px; top: 50px;}
+                75%  {left: 0px; top: 50px;}
+                100%  {left: 0px; top: 0px;}
+            }
+            @keyframes movingBox {
+                0%  {left: 0px; top: 0px;}
+                25%  {left: 50px; top: 0px;}
+                50%  {left: 50px; top: 50px;}
+                75%  {left: 0px; top: 50px;}
+                100%  {left: 0px; top: 0px;}
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <div>allo</div>
+    </body>
+
+</html>

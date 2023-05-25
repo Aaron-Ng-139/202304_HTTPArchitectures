@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<!--Q7-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Q7: Sales Sheet</title>
+
+        <script type="text/javascript">
+            <!--
+                const valid_prod_nums = ["1", "2", "3", "4", "5"];
+                const prod_total_cost = [0, 0, 0, 0, 0]; // Amount of each product sold
+                var prod_num; // User entered product num
+                var amt_sold; // User entered amount sold
+                var table_html = "";
+
+                // Loop until product number 0 is entered
+                while (prod_num != "0") {
+
+                    // Ask for product number
+                    prod_num = window.prompt("Enter product number (1-5), (0 to stop)");
+                    if (prod_num == "0"){
+                        break;
+                    }
+
+                    // Ask for amount of product sold
+                    amt_sold = NaN;
+                    while (amt_sold < 0 || isNaN(amt_sold)){
+                        amt_sold = parseFloat(window.prompt("Enter the quantity of Product " + prod_num + " sold."));
+                        if (isNaN(amt_sold)){
+                            window.alert("Not a valid number.");
+                        } else if (amt_sold < 0) {
+                            window.alert("Quantity cannot be negative.");
+                        }
+                    }
+                    
+                    // Calculate the amount of sales
+                    switch (prod_num) {
+                        case "1" :
+                            prod_total_cost[0] = 2.98 * amt_sold;
+                            break;
+                        case "2" :
+                            prod_total_cost[1] = 4.50 * amt_sold;
+                            break;
+                        case "3" :
+                            prod_total_cost[2] = 9.98 * amt_sold;
+                            break;
+                        case "4" :
+                            prod_total_cost[3] = 4.49 * amt_sold;
+                            break;
+                        case "5" :
+                            prod_total_cost[4] = 6.87 * amt_sold;
+                            break;
+                        default :
+                            window.alert("Error: " + prod_num + " is not a valid product number");
+                    }
+                }
+
+                // Build the table calculating total sales
+                document.write(
+                        "<table border=1> \
+                            <caption>Sales per product</caption> \
+                            <thead> \
+                                <tr> \
+                                    <th>Product Number</th> \
+                                    <th>Total Sales ($)</th> \
+                                </tr> \
+                            </thead> \
+                            <tbody>");
+                for (i = 0; i < prod_total_cost.length; i++) {
+                    document.write("<tr><td>" + (i + 1) + "</td><td>$" + prod_total_cost[i] + "</td></tr>");
+                }
+                document.write("</tbody></table>");
+
+            //-->
+        </script>
+
+    </head>
+
+    <body>
+        
+    </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<!--Q7-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Q7: Registration Form</title>
+    </head>
+
+    <body>
+        <h1>Website Registration Form</h1>
+
+        <form method="post" autocomplete="on">
+
+            <p>
+                <label>First Name:
+                    <input name="firstName" type="text" required>
+                </label>
+            </p>
+            <p>
+                <label>Last Name:
+                    <input name="lastName" type="text" required>
+                </label>
+            </p>
+            <p>
+                <label>Email Address:
+                    <input name="email" type="email" required> (name@domain.com)
+                </label>
+            </p>
+
+            <p>
+                <details>
+                    <summary>What year of university are you in?</summary>
+                    <label>
+                        <input name="uniYear" type="radio" value="NotYet" checked>
+                    </label>Not yet in Uni<br>
+                    <label>
+                        <input name="uniYear" type="radio" value="Freshman">
+                    </label>Freshman<br>
+                    <label>
+                        <input name="uniYear" type="radio" value="Sophomore">
+                    </label>Sophomore<br>
+                    <label>
+                        <input name="uniYear" type="radio" value="Junior">
+                    </label>Junior<br>
+                    <label>
+                        <input name="uniYear" type="radio" value="Senior">
+                    </label>Senior<br>
+                    <label>
+                        <input name="uniYear" type="radio" value="Graduate">
+                    </label>Graduate
+                </details>
+            </p>
+
+            <p>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Clear">
+            </p>
+
+        </form>
+
+    </body>
+</html>
